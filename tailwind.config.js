@@ -14,7 +14,10 @@ module.exports = {
         "4/5": "80%",
         "5/6": "83.3333333%",
         full: "100%"
-      }
+      },
+      colors: {
+        "cream": "#f8efe4", 
+      },
     }
   },
   variants: {},
