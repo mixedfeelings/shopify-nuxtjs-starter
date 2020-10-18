@@ -1,9 +1,10 @@
 <template>
-  <div v-if="productOptions">
+  <div v-if="productOptions && hasOptions">
     <div
       v-for="(productOption, index) in productOptions"
       :key="index"
     >
+    
       <product-option-select
         v-if="!isColorSelector(productOption['name'])"
         :key="productOption['name']"
@@ -40,6 +41,9 @@ export default {
   },
 
   computed: {
+    hasOptions() {
+      return this.options.length > 1;
+    },
     productOptions() {
       return this.options.map((option) => {
         return {
